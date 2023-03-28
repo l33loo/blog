@@ -2,7 +2,7 @@
 @include vanilla;
 
 hr {
-  margin: 0 0 0.7rem 0;
+  margin: 0 0 0.8rem 0;
 }
 
 .p-card {
@@ -32,6 +32,10 @@ hr {
 
 .capitalized {
   text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .App {
