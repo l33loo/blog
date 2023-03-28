@@ -15,7 +15,7 @@ export function Card(data, key) {
                         }
                     </div>
                     <hr className="is-muted" />
-                    <img className="p-card__image" src={content.featured_media} />
+                    <img alt="" className="p-card__image" src={content.featured_media} />
                     <h2 className="p-heading--4">
                         <a href={content.link}>{content.title.rendered}</a>
                     </h2>
