@@ -23,17 +23,19 @@ export function Blog() {
     }
 
     if (blogPostData === null || blogPostData.length === 0) {
-        return <div>There are no blog posts.</div>
+        return
     }
 
     return (
         <>
             <h1>Blog</h1>
-            {
-                blogPostData.map(e =>
-                    <Card key={e.id} data={e} />
-                )
-            }
+            <div className="row">
+                {
+                    blogPostData.map(e =>
+                        <Card key={e.id} data={e} />
+                    )
+                }
+            </div>
         </>
     )
 }

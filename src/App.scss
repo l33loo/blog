@@ -1,6 +1,16 @@
 @import "vanilla-framework";
 @include vanilla;
 
+hr {
+  margin: 0 0 0.7rem 0;
+}
+
+.flex-space-bw {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .App {
   text-align: center;
 }
