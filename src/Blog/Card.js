@@ -5,10 +5,9 @@ export function Card(data, key) {
     
     return (
         <div className='col-4 u-equal-height'>
-            <div key={key} className="flex-space-bw p-card u-align-text--left u-no-padding--top u-no-padding--bottom"
-                style={{boxShadow: "0px 0px 3px 3px #ebebeb", borderTop: "solid 4px #a87ca0"}}>
-                <div>
-                    <div className="p-text--small-caps" style={{fontWeight: 300, paddingBottom: "0.4rem"}}>
+            <div key={key} className="flex-space-bw p-card u-align-text--left u-no-padding--top u-no-padding--bottom">
+                <div className="p-card__inner">
+                    <div className="p-text--small-caps" style={{paddingBottom: "0.4rem"}}>
                         {content._embedded["wp:term"][2][0] ?
                             content._embedded["wp:term"][2][0].name
                             :"General"
@@ -20,8 +19,8 @@ export function Card(data, key) {
                         <a href={content.link}>{content.title.rendered}</a>
                     </h2>
                 </div>
-                <div>
-                    <div style={{fontWeight: 300, paddingBottom: "0.4rem"}}>
+                <div className="p-card__inner">
+                    <div style={{paddingBottom: "0.8rem"}}>
                         <i>
                             By
                             &nbsp;
@@ -39,7 +38,7 @@ export function Card(data, key) {
                         </i>
                     </div>
                     <hr className="is-muted"/>
-                    <div className="p-text--small capitalized" style={{fontWeight: 300}}>
+                    <div className="p-text--small capitalized">
                         {content.type}
                     </div>
                 </div>

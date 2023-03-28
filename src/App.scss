@@ -5,6 +5,25 @@ hr {
   margin: 0 0 0.7rem 0;
 }
 
+.p-card {
+  box-shadow: 0px 0px 3px 3px #ebebeb;
+  border-top: solid 4px #a87ca0;
+
+  &__inner {
+    padding: 0;
+  }
+
+  > * {
+    font-weight: 300;
+  }
+}
+
+.p-text {
+  &--small-caps {
+    font-weight: 300;
+  }
+}
+
 .flex-space-bw {
   display: flex;
   flex-direction: column;
