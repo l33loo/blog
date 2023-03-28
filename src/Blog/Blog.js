@@ -22,15 +22,16 @@ export function Blog() {
         return <div>There was an error retrieving the blog posts.</div>
     }
 
-    if (blogPostData === null) {
+    if (blogPostData === null || blogPostData.length === 0) {
         return <div>There are no blog posts.</div>
     }
 
     return (
         <>
+            <h1>Blog</h1>
             {
-                blogPostData.map((e, i) =>
-                    <Card key={i} data={e} />
+                blogPostData.map(e =>
+                    <Card key={e.id} data={e} />
                 )
             }
         </>
