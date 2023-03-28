@@ -18,24 +18,28 @@ export function Blog() {
         })
     }, [])
 
-    if (err !== null) {
-        return <div>There was an error retrieving the blog posts.</div>
-    }
+    let content
 
-    if (blogPostData === null || blogPostData.length === 0) {
-        return
+    if (err !== null) {
+        content = <div>There was an error retrieving the blog posts.</div>
+    }  else if (blogPostData === null) {
+        content = <i class="p-icon--spinner u-animation--spin"></i>
+    } else if (blogPostData.length === 0) {
+        content = <div>There are no blog posts.</div>
+    } else {
+        content = <div className="row">
+            {
+                blogPostData.map(e =>
+                    <Card key={e.id} data={e} />
+                )
+            }
+        </div>
     }
 
     return (
         <>
             <h1>Blog</h1>
-            <div className="row">
-                {
-                    blogPostData.map(e =>
-                        <Card key={e.id} data={e} />
-                    )
-                }
-            </div>
+            {content}
         </>
     )
 }
